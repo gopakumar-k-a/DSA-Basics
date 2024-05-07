@@ -8,7 +8,7 @@ function heapSort(arr) {
 }
 
 function buildMaxHeap(arr) {
-    for (let i = Math.floor(arr.length / 2); i >= 0; i--) {
+    for (let i = Math.floor(arr.length-2 / 2); i >= 0; i--) {
         heapify(arr, i, arr.length);
     }
 }
@@ -16,7 +16,7 @@ function buildMaxHeap(arr) {
 function heapify(arr, index, heapSize) {
     let leftIndex = 2 * index + 1;
     let rightIndex = 2 * index + 2;
-    lellt largest = index;
+    let largest = index;
 
     if (leftIndex < heapSize && arr[leftIndex] > arr[largest]) {
         largest = leftIndex;
